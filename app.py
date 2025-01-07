@@ -4,8 +4,12 @@ import joblib
 from PIL import Image
 import base64
 import io
+from flask_cors import CORS
+
+
 
 app = Flask(__name__)
+CORS(app)
 
 # Load the trained model and scaler
 model = joblib.load("model/combined_model.pkl")
