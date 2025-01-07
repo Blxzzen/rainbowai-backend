@@ -12,8 +12,8 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the trained model and scaler
-model = joblib.load("model/combined_model.pkl")
-scaler = joblib.load("model/combined_scaler.pkl")  # Load the saved scaler
+model = joblib.load("model/model.pkl")
+scaler = joblib.load("model/scaler.pkl")  # Load the saved scaler
 
 def preprocess_image(base64_image):
     """Convert base64 image to scaled RGB average."""
