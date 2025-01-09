@@ -48,5 +48,10 @@ def predict_color():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route("/ping", methods=["GET"])
+def ping():
+    """Ping endpoint to keep the service awake."""
+    return jsonify({"message": "Service is up and running!"}), 200
+
 if __name__ == "__main__":
     app.run(debug=True)
